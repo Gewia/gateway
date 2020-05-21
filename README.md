@@ -27,3 +27,4 @@ You want to contribute to this project? Great!
 
 This project is licensed under the `GNU General Public License v3.0`<br>
 See `LICENSE` for more information
+ 
