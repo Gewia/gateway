@@ -1,8 +1,8 @@
 package de.themorpheus.edu.gateway.graphql.resolver.query.task;
 
-import de.themorpheus.edu.backend.api.TaskTypeApi;
-import de.themorpheus.edu.backend.invoker.ApiException;
-import de.themorpheus.edu.backend.model.TaskType;
+import de.themorpheus.edu.backend.task.api.TaskTypeApi;
+import de.themorpheus.edu.backend.task.invoker.ApiException;
+import de.themorpheus.edu.backend.task.model.TaskType;
 import de.themorpheus.edu.gateway.graphql.dto.task.TaskTypeDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

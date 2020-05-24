@@ -1,12 +1,12 @@
 package de.themorpheus.edu.gateway;
 
-import de.themorpheus.edu.backend.api.DifficultyApi;
-import de.themorpheus.edu.backend.api.LectureApi;
-import de.themorpheus.edu.backend.api.ModuleApi;
-import de.themorpheus.edu.backend.api.SubjectApi;
-import de.themorpheus.edu.backend.api.TaskApi;
-import de.themorpheus.edu.backend.api.TaskTypeApi;
-import de.themorpheus.edu.backend.invoker.ApiClient;
+import de.themorpheus.edu.backend.task.api.DifficultyApi;
+import de.themorpheus.edu.backend.task.api.LectureApi;
+import de.themorpheus.edu.backend.task.api.ModuleApi;
+import de.themorpheus.edu.backend.task.api.SubjectApi;
+import de.themorpheus.edu.backend.task.api.TaskApi;
+import de.themorpheus.edu.backend.task.api.TaskTypeApi;
+import de.themorpheus.edu.backend.task.invoker.ApiClient;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

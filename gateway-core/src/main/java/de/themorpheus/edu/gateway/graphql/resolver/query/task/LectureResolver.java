@@ -1,8 +1,8 @@
 package de.themorpheus.edu.gateway.graphql.resolver.query.task;
 
-import de.themorpheus.edu.backend.api.LectureApi;
-import de.themorpheus.edu.backend.invoker.ApiException;
-import de.themorpheus.edu.backend.model.Lecture;
+import de.themorpheus.edu.backend.task.api.LectureApi;
+import de.themorpheus.edu.backend.task.invoker.ApiException;
+import de.themorpheus.edu.backend.task.model.Lecture;
 import de.themorpheus.edu.gateway.graphql.dto.task.LectureDTO;
 import graphql.schema.DataFetchingEnvironment;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,8 +1,8 @@
 package de.themorpheus.edu.gateway.graphql.resolver.query.task;
 
-import de.themorpheus.edu.backend.api.TaskApi;
-import de.themorpheus.edu.backend.invoker.ApiException;
-import de.themorpheus.edu.backend.model.Task;
+import de.themorpheus.edu.backend.task.api.TaskApi;
+import de.themorpheus.edu.backend.task.invoker.ApiException;
+import de.themorpheus.edu.backend.task.model.Task;
 import de.themorpheus.edu.gateway.graphql.dto.task.DifficultyDTO;
 import de.themorpheus.edu.gateway.graphql.dto.task.LectureDTO;
 import de.themorpheus.edu.gateway.graphql.dto.task.ModuleDTO;
