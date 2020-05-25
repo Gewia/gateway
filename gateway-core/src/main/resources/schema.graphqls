@@ -8,13 +8,25 @@ type Query {
 
     taskById(taskId: Int): Task
 
+    tasksByLectureId(lectureId: Int): [Task!]
+
+    taskGroupById(taskGroupId: Int): TaskGroup
+
+    taskGroupsByLectureId(lectureId: Int): [TaskGroup!]
+
     taskTypeById(taskId: Int): TaskType
 
     subjectById(subjectId: Int): Subject
 
+    allSubjects: [Subject!]
+
     moduleById(moduleId: Int): Module
 
+    modulesBySubjectId(subjectId: Int): [Module!]
+
     lectureById(lectureId: Int): Lecture
+
+    lecturesByModuleId(moduleId: Int): [Lecture!]
 
     difficultyById(difficultyId: Int): Difficulty
 
@@ -59,27 +71,24 @@ type Service {
 type Task {
     taskId: Int
     task: String
+    description: String
+    language: String
     author: User
     necessaryPoints: Int
-    taskType: TaskType
+    verified: Boolean
     lecture: Lecture
+    taskType: TaskType
     difficulty: Difficulty
 }
 
-type TaskType {
-    taskTypeId: Int
+type TaskGroup {
+    taskGroupId: Int
     nameKey: String
-}
-
-type Subject {
-    subjectId: Int
-    nameKey: String
-}
-
-type Module {
-    moduleId: Int
-    nameKey: String
-    subject: Subject
+    language: String
+    lecture: Lecture
+    difficulty: Difficulty
+    tasks: [Task!]
+    author: User
 }
 
 type Lecture {
@@ -88,9 +97,26 @@ type Lecture {
     module: Module
 }
 
+type Module {
+    moduleId: Int
+    nameKey: String
+    subject: Subject
+}
+
+type Subject {
+    subjectId: Int
+    nameKey: String
+    descriptionKey: String
+}
+
 type Difficulty {
     difficultyId: Int
     nameKey: String
+}
+
+type TaskType {
+taskTypeId: Int
+nameKey: String
 }
 
 # ================ User MicroService ================

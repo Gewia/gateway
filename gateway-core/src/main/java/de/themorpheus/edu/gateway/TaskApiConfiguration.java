@@ -5,6 +5,7 @@ import de.themorpheus.edu.backend.task.api.LectureApi;
 import de.themorpheus.edu.backend.task.api.ModuleApi;
 import de.themorpheus.edu.backend.task.api.SubjectApi;
 import de.themorpheus.edu.backend.task.api.TaskApi;
+import de.themorpheus.edu.backend.task.api.TaskGroupApi;
 import de.themorpheus.edu.backend.task.api.TaskTypeApi;
 import de.themorpheus.edu.backend.task.invoker.ApiClient;
 import org.springframework.context.annotation.Bean;
@@ -16,6 +17,11 @@ public class TaskApiConfiguration {
 	@Bean
 	public TaskApi taskApi() {
 		return new TaskApi(apiClient());
+	}
+
+	@Bean
+	public TaskGroupApi taskGroupApi() {
+		return new TaskGroupApi(apiClient());
 	}
 
 	@Bean

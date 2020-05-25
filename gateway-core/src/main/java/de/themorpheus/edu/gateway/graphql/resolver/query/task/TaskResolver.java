@@ -22,8 +22,11 @@ public class TaskResolver implements GraphQLQueryResolver {
 	public static final TaskDTO EXAMPLE = new TaskDTO(
 			0,
 			"Create something",
+			"descripton",
+			"de_DE",
 			UserResolver.EXAMPLE,
 			10,
+			true,
 			new TaskTypeDTO(
 					0,
 					"Exercise"
@@ -36,7 +39,8 @@ public class TaskResolver implements GraphQLQueryResolver {
 							"Analysis",
 							new SubjectDTO(
 									0,
-									"Math"
+									"Math",
+									"Math description"
 							)
 					)
 			),
@@ -57,8 +61,11 @@ public class TaskResolver implements GraphQLQueryResolver {
 		return new TaskDTO(
 				task.getTaskId(),
 				task.getTask(),
+				task.getDescription(),
+				task.getLanguage(),
 				UserResolver.EXAMPLE,
 				task.getNecessaryPoints(),
+				task.getVerified(),
 				taskTypeResolver.taskTypeById(task.getTaskTypeId().getTaskTypeId(), environment),
 				lectureResolver.lectureById(task.getLecture().getLectureId(), environment),
 				difficultyResolver.difficultyById(task.getDifficultyId().getDifficultyId(), environment)

@@ -12,27 +12,21 @@ import javax.validation.constraints.NotNull;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class TaskDTO {
+public class TaskGroupDTO {
 
-	@Min(0)
-	private int taskId;
-	@NotNull @NotEmpty @NotBlank
-	private String task;
-	@NotNull @NotEmpty @NotBlank
-	private String description;
-	@NotNull @NotEmpty @NotBlank
+	@Min(1)
+	private int taskGroupId;
+	@NotNull @NotBlank @NotEmpty
+	private String nameKey;
+	@NotNull @NotBlank @NotEmpty
 	private String language;
-	@NotNull
-	private UserDTO author;
-	@Min(0)
-	private int necessaryPoints;
-	@NotNull
-	private boolean verified;
-	@NotNull
-	private TaskTypeDTO taskType;
 	@NotNull
 	private LectureDTO lecture;
 	@NotNull
 	private DifficultyDTO difficulty;
+	@NotNull
+	private TaskDTO[] tasks;
+	@NotNull
+	private UserDTO author;
 
 }

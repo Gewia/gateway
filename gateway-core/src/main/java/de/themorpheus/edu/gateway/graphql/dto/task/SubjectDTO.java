@@ -17,5 +17,7 @@ public class SubjectDTO {
 	private int subjectId;
 	@NotNull @NotEmpty @NotBlank
 	private String nameKey;
+	@NotNull @NotEmpty @NotBlank
+	private String descriptionKey;
 
 }
